@@ -16,7 +16,7 @@ fn push(arr: &mut [i32],max: &usize,top: &mut usize){
     }
 }
 
-fn pop(arr: &mut [i32],max: &usize,top: &mut usize){
+fn pop(arr: &mut [i32],top: &mut usize){
     if *top == 0 && arr[*top] == 0{
         println!("The stack is empty");
     }else{
@@ -66,7 +66,7 @@ fn main() {
 
         match ch{
             1 => push(&mut stack_arr,&max,&mut top),
-            2 => pop(&mut stack_arr,&max,&mut top),
+            2 => pop(&mut stack_arr,&mut top),
             3 => display(&mut stack_arr,&max),
             4 => make_null(&mut stack_arr,&max,&mut top),
             5 => {println!("The program is going to exit now !!!!");break;},
